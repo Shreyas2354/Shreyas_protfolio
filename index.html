@@ -109,7 +109,7 @@ h3 {
     content: '';
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.6); /* This creates a semi-transparent black overlay */
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay for readability */
     z-index: 0;
 }
 .hero-content {
@@ -331,9 +331,25 @@ h3 {
     padding-left: 20px;
     border-left: 2px solid #FFD700;
 }
+/* New style for the clickable experience items */
+.timeline-item-link {
+    display: block; /* Makes the entire item clickable */
+    text-decoration: none; /* Removes the underline from the link */
+    color: inherit; /* Keeps the text color consistent with the parent */
+    position: relative;
+    z-index: 1;
+}
 .timeline-item {
     position: relative;
     margin-bottom: 25px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #1a1a1a;
+}
+.timeline-item:hover {
+    background-color: #2a2a2a;
+    transform: translateX(10px);
 }
 .timeline-dot {
     position: absolute;
@@ -484,7 +500,6 @@ section.visible {
 
 <section id="hero" class="hero-section">
     <div class="hero-content">
-        <img src="">
         <h2 class="hero-title">Data Science Student</h2>
         <p class="hero-subtitle">Hello, I'm Mudhalkar Shreyas, a Data Science student dedicated to solving problems using real-world datasets and front-end development.</p>
         <div class="hero-buttons">
@@ -497,7 +512,7 @@ section.visible {
 <section id="about" class="about-section">
     <div class="container">
         <div class="about-image">
-            <img src="images/profile.jpg" alt="Mudhalkar Shreyas">
+            <img src="shreyas.jpeg" alt="Mudhalkar Shreyas">
         </div>
         <div class="about-text">
             <h3>About Me</h3>
@@ -521,17 +536,17 @@ section.visible {
         <h3>Projects</h3>
         <div class="section-grid">
             <div class="section-card">
-                <img src="https://www.google.com/imgres?q=Restaurant%20Data%20Analytics%20image&imgurl=https%3A%2F%2Fwww.foodspark.io%2Fwp-content%2Fuploads%2F2023%2F09%2FDefining-Restaurant-Data-Analytics.jpg&imgrefurl=https%3A%2F%2Fwww.foodspark.io%2Fhow-restaurants-use-data-and-analytics-to-boost-business-profit%2F&docid=HByFY9c7sRX-UM&tbnid=SaOuxbu1f_MiIM&vet=12ahUKEwjdxZPM0v-OAxXqRWcHHcTOGpoQM3oECD8QAA..i&w=1200&h=628&hcb=2&ved=2ahUKEwjdxZPM0v-OAxXqRWcHHcTOGpoQM3oECD8QAA" alt="Project 1">
+                <img src="resturant.jpeg" alt="Project 1">
                 <h4>Restaurant Data Analytics</h4>
                 <p>Worked on a restaurant dataset during a data science internship to analyze customer behavior and sales trends. Performed data preprocessing, cleaning, and EDA using Python and Pandas. Delivered a structured dataset for visualization and predictive modeling.</p>
             </div>
             <div class="section-card">
-                <img src="https://www.google.com/imgres?q=customer%20churn%20prediction&imgurl=https%3A%2F%2Fcdn.analyticsvidhya.com%2Fwp-content%2Fuploads%2F2020%2F05%2FChurn-Prediction-scaled.jpg&imgrefurl=https%3A%2F%2Fwww.analyticsvidhya.com%2Fblog%2F2021%2F08%2Fchurn-prediction-commercial-use-of-data-science%2F&docid=noap8sgoEwDtXM&tbnid=5qLcH_fT9YQ56M&vet=12ahUKEwjlsKCt0_-OAxUrR2wGHUySCrU4FBAzegQIcBAA..i&w=2560&h=1440&hcb=2&ved=2ahUKEwjlsKCt0_-OAxUrR2wGHUySCrU4FBAzegQIcBAA" alt="Project 2">
+                <img src="customer.jpg" alt="Project 2">
                 <h4>Customer Churn Prediction</h4>
                 <p>Contributed to a project involving customer churn prediction during an internship at Codec Networks.</p>
             </div>
             <div class="section-card">
-                <img src="images/project3.jpg" alt="Project 3">
+                <img src="power bi.png" alt="Project 3">
                 <h4>Power BI Dashboards</h4>
                 <p>Developed Power BI dashboards as part of a project during an internship at Codec Networks.</p>
             </div>
@@ -543,18 +558,23 @@ section.visible {
     <div class="container">
         <h3>Experience</h3>
         <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <p class="timeline-date">Sept 2023 - Sept 2025</p>
-                <h5>Data Science Intern at Cognifyz Technologies</h5>
-                <p>Worked on a restaurant dataset to analyze customer behavior and sales trends. Performed data preprocessing, cleaning, and exploratory data analysis (EDA) using Python and Pandas.</p>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <p class="timeline-date">May 2021 - May 2025</p>
-                <h5>Data Science Intern at Codec Networks</h5>
-                <p>Contributed to projects involving customer churn prediction and the development of Power BI dashboards.</p>
-            </div>
+            <a href="https://drive.google.com/file/d/1pcg7rMcccGpdDtT2ermz06BhVbwid9oB/view?usp=drivesdk" target="_blank" class="timeline-item-link">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <p class="timeline-date">may 2025 - june 2025</p>
+                    <h5>Data Science Intern at Cognifyz Technologies</h5>
+                    <p>Worked on a restaurant dataset to analyze customer behavior and sales trends. Performed data preprocessing, cleaning, and exploratory data analysis (EDA) using Python and Pandas.</p>
+                </div>
+            </a>
+            
+            <a href="https://drive.google.com/file/d/18y_Fzu423xZpuw9UXkSYlXV0tzARonVj/view?usp=drivesdk" target="_blank" class="timeline-item-link">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <p class="timeline-date">june 2021 - Augest 2025</p>
+                    <h5>Data Science Intern at Codec Networks</h5>
+                    <p>Contributed to projects involving customer churn prediction and the development of Power BI dashboards.</p>
+                </div>
+            </a>
         </div>
     </div>
 </section>
